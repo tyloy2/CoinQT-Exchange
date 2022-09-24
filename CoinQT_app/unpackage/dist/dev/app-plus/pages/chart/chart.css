@@ -1,0 +1,40 @@
+
+.menu[data-v-5d38090c] {
+		z-index: 999;
+		transform: translateX(-101%);
+}
+.menu[data-v-5d38090c] {
+		transition-duration: 0.25s;
+		transition-timing-function: ease;
+		transition-property: transform;
+		transition-delay: 0ms;
+		transform: translateX(-101%);
+		z-index: 999;
+}
+.menuOn[data-v-5d38090c] {
+		transform: translateX(0%);
+}
+.body[data-v-5d38090c] {
+		transition-duration: 0.25s;
+		transition-timing-function: ease;
+		transition-property: transform;
+		transition-delay: 0ms;
+		transform: translateX(0%) scale(1);
+}
+.bodyOn[data-v-5d38090c] {
+		transform: translateX(70%) scale(0.8);
+}
+
+
+
+
+.noNvueBorder[data-v-3c6cb18c]{
+	box-sizing: border-box;
+}
+
+
+
+.text-view[data-v-0d77a45e]{
+		box-sizing: border-box;
+}
+

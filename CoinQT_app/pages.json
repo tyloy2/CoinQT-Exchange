@@ -1,0 +1,119 @@
+{
+	"easycom":{
+		"autoscan": true,
+		"custom":{
+			"^tm-(.*)": "@/tmui/components/tm-$1/tm-$1.vue"
+		}
+	 },
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom",
+				"titlePenetrate": "YES",
+				"transparentTitle": "always"
+			}
+		},
+		{
+			"path": "pages/market/market",
+			"style": {
+				"navigationBarTitleText": "行情",
+				// "navigationStyle": "custom",
+				// "titlePenetrate": "YES",
+				// "transparentTitle": "always"
+			}
+		},
+		{
+			"path": "pages/currency/currency",
+			"style": {
+				"navigationBarTitleText": "币币",
+				"navigationStyle": "custom",
+				"titlePenetrate": "YES",
+				"transparentTitle": "always"
+			}
+		},
+		{
+			"path": "pages/contract/contract",
+			"style": {
+				"navigationBarTitleText": "合约",
+				"navigationStyle": "custom",
+				"titlePenetrate": "YES",
+				"transparentTitle": "always"
+			}
+		},
+		{
+			"path": "pages/assets/assets",
+			"style": {
+				"navigationBarTitleText": "资产",
+				"navigationStyle": "custom",
+				"titlePenetrate": "YES",
+				"transparentTitle": "always"
+			}
+		},
+		{
+			"path": "pages/index/search",
+			"style": {
+				"navigationBarTitleText": "搜索组件"
+			}
+		},
+		{
+			"path": "pages/index/settheme",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom",
+				"titlePenetrate": "YES",
+				"transparentTitle": "always"
+			}
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"condition": {
+		"current": 0,
+		"list": [
+			{
+				"name": "",
+				"path": "", 
+				"query": ""
+			}
+		]
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#0ead98",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/tabbar/home.png",
+			"selectedIconPath": "static/tabbar/home_select.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/market/market",
+			"iconPath": "static/tabbar/market.png",
+			"selectedIconPath": "static/tabbar/market_select.png",
+			"text": "行情"
+		}, {
+			"pagePath": "pages/currency/currency",
+			"iconPath": "static/tabbar/currency.png",
+			"selectedIconPath": "static/tabbar/currency_select.png",
+			"text": "币币"
+		}, {
+			"pagePath": "pages/contract/contract",
+			"iconPath": "static/tabbar/contract.png",
+			"selectedIconPath": "static/tabbar/contract_select.png",
+			"text": "合约"
+		}, {
+			"pagePath": "pages/assets/assets",
+			"iconPath": "static/tabbar/assets.png",
+			"selectedIconPath": "static/tabbar/assets_select.png",
+			"text": "资产"
+		}]
+	}
+}

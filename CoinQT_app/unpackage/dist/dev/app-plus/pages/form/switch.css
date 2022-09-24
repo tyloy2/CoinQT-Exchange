@@ -1,0 +1,119 @@
+
+.menu[data-v-5d38090c] {
+		z-index: 999;
+		transform: translateX(-101%);
+}
+.menu[data-v-5d38090c] {
+		transition-duration: 0.25s;
+		transition-timing-function: ease;
+		transition-property: transform;
+		transition-delay: 0ms;
+		transform: translateX(-101%);
+		z-index: 999;
+}
+.menuOn[data-v-5d38090c] {
+		transform: translateX(0%);
+}
+.body[data-v-5d38090c] {
+		transition-duration: 0.25s;
+		transition-timing-function: ease;
+		transition-property: transform;
+		transition-delay: 0ms;
+		transform: translateX(0%) scale(1);
+}
+.bodyOn[data-v-5d38090c] {
+		transform: translateX(70%) scale(0.8);
+}
+
+
+
+
+.noNvueBorder[data-v-3c6cb18c]{
+	box-sizing: border-box;
+}
+
+
+
+.text-view[data-v-0d77a45e]{
+		box-sizing: border-box;
+}
+
+
+
+.spin[data-v-30747af6] {
+	transform-origin: 50% 50%;
+	animation: xhRote-30747af6 1.2s infinite linear;
+}
+@keyframes xhRote-30747af6 {
+0% {
+		transform: rotate(0deg);
+}
+100% {
+		transform: rotate(360deg);
+}
+}
+
+
+
+
+.fade[data-v-7cafae9a] {
+		opacity: 0;
+}
+.fade-reverse[data-v-7cafae9a] {
+		opacity: 1;
+}
+.up[data-v-7cafae9a] {
+		transform: translateY(0%);
+}
+.up-reverse[data-v-7cafae9a] {
+		transform: translateY(-101%);
+}
+.down[data-v-7cafae9a] {
+		transform: translateY(0%);
+}
+.down-reverse[data-v-7cafae9a] {
+		transform: translateY(101%);
+}
+.left[data-v-7cafae9a] {
+		transform: translateX(0%);
+}
+.left-reverse[data-v-7cafae9a] {
+		transform: translateX(-101%);
+}
+.right[data-v-7cafae9a] {
+		transform: translateX(0%);
+}
+.right-reverse[data-v-7cafae9a] {
+		transform: translateX(101%);
+}
+.zoom[data-v-7cafae9a] {
+		transform: scale(0.7, 0.7);
+		opacity: 0;
+}
+.zoom-reverse[data-v-7cafae9a] {
+		transform: scale(1, 1);
+		opacity: 1;
+}
+
+
+
+.base[data-v-361534ac]{
+		transform:translateX(0%);
+		transition: 0.2s ease;
+		left: 0;
+}
+.on[data-v-361534ac]{
+		left:calc(50% + 2px)
+}
+.off[data-v-361534ac]{
+		left:2px
+}
+
+
+
+.switchbgani[data-v-361534ac]{
+		transition-timing-function: ease;
+		transition-property: background-color;
+		transition-duration: 0.3s;
+		transition-delay: 0ms;
+}
