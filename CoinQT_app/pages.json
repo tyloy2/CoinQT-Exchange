@@ -19,18 +19,18 @@
 			"path": "pages/market/market",
 			"style": {
 				"navigationBarTitleText": "行情",
-				// "navigationStyle": "custom",
-				// "titlePenetrate": "YES",
-				// "transparentTitle": "always"
+				"navigationStyle": "custom",
+				"titlePenetrate": "YES",
+				"transparentTitle": "always"
 			}
 		},
 		{
 			"path": "pages/currency/currency",
 			"style": {
-				"navigationBarTitleText": "币币",
-				"navigationStyle": "custom",
-				"titlePenetrate": "YES",
-				"transparentTitle": "always"
+				"navigationBarTitleText": "币币"
+				// "navigationStyle": "custom",
+				// "titlePenetrate": "YES",
+				// "transparentTitle": "always"
 			}
 		},
 		{
@@ -55,6 +55,25 @@
 			"path": "pages/index/search",
 			"style": {
 				"navigationBarTitleText": "搜索组件"
+			}
+		},
+		{
+			"path": "pages/assets/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "custom",
+				"titlePenetrate": "YES",
+				"transparentTitle": "always"
+				
+			}
+		},
+		{
+			"path": "pages/assets/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"navigationStyle": "custom",
+				"titlePenetrate": "YES",
+				"transparentTitle": "always"
 			}
 		},
 		{

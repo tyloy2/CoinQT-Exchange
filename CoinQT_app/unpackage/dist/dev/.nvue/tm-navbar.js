@@ -17,10 +17,10 @@ var __spreadValues = (a, b) => {
   return a;
 };
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
-import { defineComponent, getCurrentInstance, computed, ref, onMounted, openBlock, createElementBlock, createElementVNode, normalizeStyle, unref, createVNode, withCtx, createBlock, createCommentVNode, renderSlot } from "vue";
+import { defineComponent, getCurrentInstance, computed, ref, onMounted, openBlock, createElementBlock, createElementVNode, normalizeStyle, unref, createVNode, withCtx, createCommentVNode, renderSlot } from "vue";
 import { t as tmSheet } from "./tm-sheet.js";
-import { _ as _export_sfc, c as custom_props, u as useTmpiniaStore, a as tmText } from "./tm-text.js";
-import { t as tmIcon } from "./tm-icon.js";
+import { c as custom_props, u as useTmpiniaStore, t as tmText } from "./tm-app.js";
+import { _ as _export_sfc } from "./plugin-vue_export-helper.js";
 var _style_0 = { "statusHeightTop": { "": { "zIndex": 400 } } };
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "tm-navbar",
@@ -139,47 +139,12 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     });
     const _title = computed(() => props.title);
     const _fontColor = computed(() => props.fontColor);
-    const _homeColor = computed(() => props.homeColor);
+    computed(() => props.homeColor);
     const _blur = computed(() => props.blur);
     const _pages = ref(0);
     onMounted(() => {
       _pages.value = getCurrentPages().length;
     });
-    const backhome = () => {
-      uni.reLaunch({
-        url: props.homePath
-      });
-    };
-    let timerId = NaN;
-    function debounce(func, wait = 500, immediate = false) {
-      if (!isNaN(timerId))
-        clearTimeout(timerId);
-      if (immediate) {
-        var callNow = !timerId;
-        timerId = setTimeout(() => {
-          timerId = NaN;
-        }, wait);
-        if (callNow)
-          typeof func === "function" && func();
-      } else {
-        timerId = setTimeout(() => {
-          typeof func === "function" && func();
-        }, wait);
-      }
-    }
-    const goback = () => {
-      debounce(async () => {
-        if (typeof props.beforeBack === "function") {
-          let p = await props.beforeBack();
-          if (typeof p === "function") {
-            p = await p();
-          }
-          if (!p)
-            return;
-        }
-        uni.navigateBack({});
-      }, 250, true);
-    };
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("view", { renderWhole: true }, [
         createElementVNode("view", {
@@ -225,24 +190,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
                   class: "flex-row flex flex-row-center-start",
                   style: normalizeStyle({ width: unref(_leftWidth) + "rpx" })
                 }, [
-                  _pages.value > 1 && props.hideBack ? (openBlock(), createBlock(tmIcon, {
-                    key: 0,
-                    unit: props.unit,
-                    "font-size": props.iconFontSize,
-                    _class: "pointer pb-12 pt-12 px-24",
-                    color: unref(_homeColor),
-                    onClick: goback,
-                    name: "tmicon-angle-left"
-                  }, null, 8, ["unit", "font-size", "color"])) : createCommentVNode("v-if", true),
-                  _pages.value == 1 && !__props.hideHome ? (openBlock(), createBlock(tmIcon, {
-                    key: 1,
-                    unit: props.unit,
-                    _class: "pointer  pb-12 pt-12 px-24",
-                    onClick: backhome,
-                    color: unref(_homeColor),
-                    "font-size": props.iconFontSize,
-                    name: "tmicon-md-home"
-                  }, null, 8, ["unit", "color", "font-size"])) : createCommentVNode("v-if", true),
+                  createCommentVNode(' 						<tm-icon :unit="props.unit" :font-size="props.iconFontSize" _class="pointer pb-12 pt-12 px-24" :color="_homeColor" @click="goback" v-if="_pages>1&&props.hideBack" name="tmicon-angle-left"></tm-icon>\r\n						<tm-icon :unit="props.unit" _class="pointer  pb-12 pt-12 px-24" @click="backhome" v-if="_pages==1&&!hideHome" :color="_homeColor" :font-size="props.iconFontSize" name="tmicon-md-home"></tm-icon>\r\n '),
                   renderSlot(_ctx.$slots, "left")
                 ], 4),
                 createElementVNode("view", {

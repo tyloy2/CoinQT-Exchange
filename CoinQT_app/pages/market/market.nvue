@@ -1,0 +1,160 @@
+<template>
+    <tm-app>
+		<!-- navbar -->
+		<tm-navbar title="Market"   linearDeep="accent" hideHome   >
+			<template v-slot:right>
+				<navigator url="search" open-type="navigate" hover-class="navigator-hover" animation-type="pop-in" animation-duration="3000" >
+				<tm-icon _class="px-10" name="tmicon-tongzhi"></tm-icon>
+				</navigator>
+				<tm-icon _class="px-32" name="tmicon-external-link"></tm-icon>
+			</template>
+		</tm-navbar>
+		
+		<tm-sheet darkBgColor="#050505" :margin="[0, 0]">
+			<view class="flex-row flex-row-center-start pb-10">
+				<tm-image :width="108" :height="67.5" src="/static/logo.png"></tm-image>
+				<view class="pl-16">
+					<tm-text _class="text-weight-b" :font-size="36" label="TMUI 3.0.0"></tm-text>
+					<tm-text color="grey" label="全端兼容vue3 TypeScript pinia组件库"></tm-text>
+				</view>
+			</view>
+			<tm-input placeholder="组件中文/英文名称" :border="1" showClear prefix="tmicon-search" 
+				searchLabel="搜索组件"></tm-input>
+		</tm-sheet>
+		
+		<!-- countlist -->
+        <tm-sheet>
+        	<tm-grid :width="630" :col="3">
+        		<tm-grid-item  >
+        			<tm-text label="币种数量" :font-size="24" ></tm-text>
+        			<tm-text label="611"  _class="font-weight-b" :font-size="32"   ></tm-text>
+        		</tm-grid-item>
+        		<tm-grid-item >
+        			<tm-text label="总市值(CNY)" :font-size="24" ></tm-text>
+        			<tm-text label="66878.31亿" _class="font-weight-b" :font-size="36" ></tm-text>
+        		</tm-grid-item>
+        		<tm-grid-item >
+        			<tm-text label="24H涨跌" :font-size="24" ></tm-text>
+        			<tm-text label="+0.080%" _class="font-weight-b" :font-size="32" color="#0ead98" ></tm-text>
+        		</tm-grid-item>
+        	</tm-grid>
+        </tm-sheet>
+		<!-- coinlist -->
+        <tm-sheet :padding="[0,0]" _class="overflow" >
+        <tm-tabs showTabsLineAni :item-width="110"  :width="636" :height="500" default-name="1" :list="coinlist"  ></tm-tabs>
+        <tm-row :gutter="60">
+        					  <tm-col  align="start" class="flex-1">
+        						  <tm-text label="市值(CNY)" color="grey" :font-size="18"></tm-text>
+        					  </tm-col>
+        					  <tm-col  class="flex-1">
+        						  <tm-text label="价格/成交额" color="grey" :font-size="18" ></tm-text>
+        					  </tm-col>
+        					  <tm-col  align="end" class="flex-1">
+        						  <tm-text label="24H涨跌" color="grey" :font-size="18" ></tm-text>
+        					  </tm-col>
+        </tm-row>
+        
+        	 <tm-collapse accordion >
+        		 <tm-collapse-item  name="1" :height="120"  >
+        			 <template v-slot:title>
+        			 	<tm-grid  :col="3" class="l--40"   >
+        			 		<tm-grid-item  class="l--15"  >
+        			 			<tm-row :gutter="4"   >
+        			 				  <tm-col   :height="100"  >
+        			 					  <tm-image  :width="40" :height="40" src="http://icon.tgbott.com/eth2.png" _style="color: red;"  >
+        			 					  </tm-image>
+        			 					  <tm-tag size="xs" class="" :font-size="12" color="grey-5" :round="20" label="1"></tm-tag>
+        			 				  </tm-col>
+        			 				  <tm-col  :height="100">
+        			 					  <tm-text label="XAL"  class="t--10" style="font-weight: 600;" :font-size="32" ></tm-text>
+        			 					  <tm-text label="114.23亿"  color="grey"  :font-size="18" ></tm-text>
+        			 				  </tm-col>
+        			 			</tm-row>
+        			 		</tm-grid-item>
+        			 		<tm-grid-item class="l--50" >
+        			 			<tm-text label="121.353123"  class="t--10" style="font-weight:600;"  :font-size="32"  ></tm-text>
+        						<tm-text label="842.23万"  color="grey"  :font-size="18" ></tm-text>
+        			 		</tm-grid-item>
+        			 		<tm-grid-item class="l--50">
+        			 			<tm-button  size="small"   label="small"></tm-button>
+        			 		</tm-grid-item>
+        			 	</tm-grid>	
+        			 </template>
+        			 <tm-sheet color="grey-5"  :text="true" >
+        				 <tm-row :margin="[0,5]" :gutter="2" color="grey-5"  >
+        					 <tm-col class="flex-6" color="grey-5" :text="true" >
+        						 <tm-text color="grey" :font-size="24" label="市场" ></tm-text>
+        					 </tm-col>
+        					 <tm-col class="flex-3" color="grey-5" :text="true">
+        						 <tm-text color="grey" :font-size="24" label="最新价"></tm-text>
+        					 </tm-col>
+        					 <tm-col class="flex-3"  color="grey-5" :text="true">
+        						 <tm-text color="grey" :font-size="24" label="24H涨跌"></tm-text>
+        					 </tm-col>
+        				 </tm-row>
+        				 <tm-divider></tm-divider>
+        				 <tm-row :margin="[0,5]" :gutter="2" color="grey-5" >
+        						 <tm-col class="flex-6" color="grey-5" :text="true"  >
+        							 <tm-text label="币币" style="font-size: 24rpx;font-weight: 900;"></tm-text>
+        						 </tm-col>
+        						 <tm-col class="flex-3" color="grey-5" :text="true">
+        						 </tm-col>
+        						 <tm-col class="flex-3"  color="grey-5" :text="true">
+        						 </tm-col>
+        				 </tm-row>
+        				 <tm-row :margin="[0,5]" :gutter="2" color="grey-5"  >
+        							 <tm-col class="flex-6" color="grey-5" :text="true" >
+        								 <tm-text label="PIT/USDT" color="grey-darken-2" :font-size="24"></tm-text>
+        							 </tm-col>
+        							 <tm-col class="flex-3" color="grey-5" :text="true">
+        								 <tm-text label="0.0000213123213"  color="grey-darken-2" :font-size="24" ></tm-text>
+        							 </tm-col>
+        							 <tm-col class="flex-3" color="grey-5" :text="true" >
+        								 <tm-text label="+23.29%"  color="primary" :font-size="24" ></tm-text>
+        							 </tm-col>
+        				 </tm-row>
+        				 
+        			 </tm-sheet> 
+        			  <tm-divider></tm-divider>
+        		 </tm-collapse-item>
+        		 
+        	 </tm-collapse>
+        	 
+        </tm-sheet>
+		
+
+    </tm-app>
+</template>
+<script lang="ts" setup>
+import { ref, getCurrentInstance } from "vue"
+import { onShow, onLoad } from "@dcloudio/uni-app";
+
+const coinlist = ref([
+	    { key: "1", title: "持仓", icon: "" },
+	    { key: "2", title: "自选", icon: "" },
+	    { key: "3", title: "全部",dotColor:'yellow', icon: "" },
+	    { key: "4", title: "AMM", icon: "" },
+		{ key: "5", title: "杠杆", icon: "" },
+		{ key: "6", title: "Terra Classic", icon: "" },
+		{ key: "7", title: "粉丝代币", icon: "" },
+		{ key: "8", title: "MEME", icon: "" },
+		{ key: "9", title: "NFT", icon: "" },
+		{ key: "10", title: "DeFi", icon: "" },
+		{ key: "11", title: "GameFi", icon: "" },
+		{ key: "12", title: "Coin", icon: "" },
+		{ key: "13", title: "隐私", icon: "" },
+		{ key: "14", title: "Avalanche", icon: "" },
+		{ key: "15", title: "元宇宙", icon: "" },
+		{ key: "16", title: "Solana", icon: "" },
+		{ key: "17", title: "Token", icon: "" },
+		{ key: "18", title: "DAO", icon: "" },
+		{ key: "19", title: "Layer2", icon: "" },
+		{ key: "20", title: "存储", icon: "" },
+		{ key: "21", title: "Polkadot", icon: "" },
+		{ key: "22", title: "Fantom", icon: "" },
+		{ key: "23", title: "CSC", icon: "" },
+		{ key: "24", title: "BSC", icon: "" },
+		{ key: "25", title: "Cosmos", icon: "" }
+	])
+
+</script>

@@ -1,9 +1,9 @@
-import { _ as _export_sfc, u as useTmpiniaStore, o as onLoad, g as formatAppLog, t as tmApp, a as tmText } from "../../tm-text.js";
+import { u as useTmpiniaStore, o as onLoad, i as formatAppLog, g as tmApp, t as tmText } from "../../tm-app.js";
 import { defineComponent, ref, getCurrentInstance, onMounted, openBlock, createElementBlock, createVNode, withCtx, createElementVNode, Fragment, renderList, createBlock } from "vue";
 import { t as tmSheet } from "../../tm-sheet.js";
 import { t as tmNavbar } from "../../tm-navbar.js";
+import { _ as _export_sfc } from "../../plugin-vue_export-helper.js";
 import "pinia";
-import "../../tm-icon.js";
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "settheme",
   setup(__props) {

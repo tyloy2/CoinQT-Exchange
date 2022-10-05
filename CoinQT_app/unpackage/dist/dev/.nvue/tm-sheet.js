@@ -18,7 +18,8 @@ var __spreadValues = (a, b) => {
 };
 var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 import { defineComponent, getCurrentInstance, computed, ref, watch, nextTick, provide, openBlock, createElementBlock, unref, normalizeClass, normalizeStyle, createElementVNode, renderSlot, createCommentVNode } from "vue";
-import { _ as _export_sfc, c as custom_props, u as useTmpiniaStore, b as computedStyle, d as computedClass, e as computedDark, f as computedTheme } from "./tm-text.js";
+import { c as custom_props, u as useTmpiniaStore, a as computedStyle, b as computedClass, d as computedDark, e as computedTheme } from "./tm-app.js";
+import { _ as _export_sfc } from "./plugin-vue_export-helper.js";
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "tm-sheet",
   props: __spreadProps(__spreadValues({}, custom_props), {

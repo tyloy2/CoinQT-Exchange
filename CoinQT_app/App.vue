@@ -1,8 +1,19 @@
-<script  lang="ts" setup>
-	// import { useTmpiniaStore } from '@/tmui/tool/lib/tmpinia';
-	// const store = useTmpiniaStore();
-	// store.setTmVuetifyAddTheme("QT_Green","#0ead98")
-	
+<script >
+	export default {  
+	        globalData: {  
+	            userinfo: 'text'  
+	        },  
+	        onLaunch: function() {  
+	            console.log('App Launch')  
+	        },  
+	        onShow: function() {  
+	            console.log('App Show') 
+				this.userinfo = uni.$tm.u.getCookie("userinfo")
+	        },  
+	        onHide: function() {  
+	            console.log('App Hide')  
+	        }  
+	    }  
 </script>
 <style>
 	
@@ -13,14 +24,13 @@
 	@import './tmui/scss/noNvue.css';
 	/* #endif */
 
-
 	/* #ifdef H5 */
 	body::-webkit-scrollbar,
 	div::-webkit-scrollbar,
 	*::-webkit-scrollbar {
 		display: none;
 	}
-
+	
 	body.pages-index-index uni-page-body,
 	body {
 		padding-bottom: 0 !important;

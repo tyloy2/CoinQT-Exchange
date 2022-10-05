@@ -32,9 +32,9 @@
 				<view class="flex flex-row flex-1 flex-row flex-row-center-between ">
 					<view class="flex-row flex flex-row-center-start " :style="{width:_leftWidth+'rpx'}">
 						<!-- #ifndef MP-ALIPAY -->
-						<tm-icon :unit="props.unit" :font-size="props.iconFontSize" _class="pointer pb-12 pt-12 px-24" :color="_homeColor" @click="goback" v-if="_pages>1&&props.hideBack" name="tmicon-angle-left"></tm-icon>
+<!-- 						<tm-icon :unit="props.unit" :font-size="props.iconFontSize" _class="pointer pb-12 pt-12 px-24" :color="_homeColor" @click="goback" v-if="_pages>1&&props.hideBack" name="tmicon-angle-left"></tm-icon>
 						<tm-icon :unit="props.unit" _class="pointer  pb-12 pt-12 px-24" @click="backhome" v-if="_pages==1&&!hideHome" :color="_homeColor" :font-size="props.iconFontSize" name="tmicon-md-home"></tm-icon>
-						<!-- #endif -->
+ -->						<!-- #endif -->
 						<slot name="left"></slot>
 					</view>
 					<view class=" flex flex-row-center-center" :style="{width:contentwidth+'px'}">

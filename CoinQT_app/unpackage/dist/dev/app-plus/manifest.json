@@ -36,12 +36,8 @@
     },
     "popGesture": "close",
     "launchwebview": {
-      "render": "always",
       "id": "1",
-      "kernel": "WKWebview",
-      "uniNView": {
-        "path": "pages/index/index.js"
-      }
+      "kernel": "WKWebview"
     },
     "statusbar": {
       "immersed": "supportedDevice",
@@ -132,16 +128,73 @@
     },
     "arguments": "{\"name\":\"\",\"path\":\"\",\"query\":\"\"}",
     "allowsInlineMediaPlayback": true,
+    "safearea": {
+      "background": "#ffffff",
+      "bottom": {
+        "offset": "auto"
+      }
+    },
     "uni-app": {
       "control": "uni-v3",
       "vueVersion": "3",
-      "compilerVersion": "3.6.3",
+      "compilerVersion": "3.6.4",
       "nvueCompiler": "uni-app",
       "renderer": "auto",
       "nvue": {
         "flex-direction": "column"
       },
       "nvueLaunchMode": "normal"
+    },
+    "tabBar": {
+      "position": "bottom",
+      "color": "#7A7E83",
+      "selectedColor": "#0ead98",
+      "borderStyle": "rgba(0,0,0,0.4)",
+      "blurEffect": "none",
+      "fontSize": "10px",
+      "iconWidth": "24px",
+      "spacing": "3px",
+      "height": "50px",
+      "backgroundColor": "#ffffff",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "iconPath": "/static/tabbar/home.png",
+          "selectedIconPath": "/static/tabbar/home_select.png",
+          "text": "首页"
+        },
+        {
+          "pagePath": "pages/market/market",
+          "iconPath": "/static/tabbar/market.png",
+          "selectedIconPath": "/static/tabbar/market_select.png",
+          "text": "行情"
+        },
+        {
+          "pagePath": "pages/currency/currency",
+          "iconPath": "/static/tabbar/currency.png",
+          "selectedIconPath": "/static/tabbar/currency_select.png",
+          "text": "币币"
+        },
+        {
+          "pagePath": "pages/contract/contract",
+          "iconPath": "/static/tabbar/contract.png",
+          "selectedIconPath": "/static/tabbar/contract_select.png",
+          "text": "合约"
+        },
+        {
+          "pagePath": "pages/assets/assets",
+          "iconPath": "/static/tabbar/assets.png",
+          "selectedIconPath": "/static/tabbar/assets_select.png",
+          "text": "资产"
+        }
+      ],
+      "selectedIndex": 0,
+      "shown": true,
+      "child": [
+        "lauchwebview"
+      ],
+      "selected": 0
     }
-  }
+  },
+  "launch_path": "__uniappview.html"
 }
